@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
         <style>
         body {
             font-family: ariel, sans-serif;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .center {
+            margin-left: auto;
+            margin-right: auto;
         }
         .logo {
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 25%;
-            padding-top: 117px;
+            padding-top: 18%;
             padding-bottom: 15px;
         }
-        .search {
-            display: block;
-            margin-left: 27%;
-            margin-right: auto;
-            width: 400px;
+        .searchcontainer {
+            display: flex;
+            justify-content: center;
+        }
+        #srch {
+            width: 40em;
+            max-width: 40em;
+            min-width: 25em;
+
         }
         .google {
-            display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 50%;
-            padding-top: 12px;
+            padding: 12px;
+            text-align: center;
         }
         .flexcontainer {
             display: flex;
+            justify-content: space-between;
             font-size: 13px;
-            padding-top: 15px;
-            padding-left: 5px;
-            padding-right: 10px;
+            padding: 20px 20px 0px 20px;
         }
         .flexcontainer a {
             padding: 7.5px;
@@ -88,8 +99,11 @@
             height: 36px;
             min-width: 54px;
         }
+        .filler {
+            flex-grow: 1;
+        }
         #bg {
-            padding-top:160px;
+
         }
         #bf {
             padding: 10px 25px;
@@ -98,57 +112,58 @@
             border-bottom: 1px solid #e4e4e4;
             font-size: 15px;
         }
-        .footer {
+        .footerlinks {
             display: flex;
             background-color: #f2f2f2;
             padding: 10px 20px;
             justify-content: space-between;
-        }
-        .footerright {
-            align-content: flex-end;
         }
         #bb {
             padding: 0px 5px 0px 5px;
             font-size: 14px;
         }
         </style>
+        
     </head> 
     <body>
         <div class="flexcontainer">
-            <div><a id="tn" href="#About">About</a></div>
-            <div style="padding-right:500px"><a id="tn" href="#Store">Store</a></div>
-            <div style="padding-left:450px"><a id="tn" href="#Gmail">Gmail</a></div>
-            <div><a id="tn" href="#Images">Images</a></div>
-            <div><a id="button" href="#sign-in">Sign in</a></div>
-        </div>
-        <center>
-            <div class="logo">
-                <img height="92" src="googlelogo_color_272x92dp.png">
+            <div>
+                <a id="tn" href="#About">About</a>
+                <a id="tn" href="#Store">Store</a>
             </div>
-        </center>
-        <div class="search">
-            <input class="searchhover" type="text">
+            <div>
+                <a id="tn" href="#Gmail">Gmail</a>
+                <a id="tn" href="#Images">Images</a>
+                <a id="button" href="#sign-in">Sign in</a>
+            </div>
         </div>
-        <div class="google"> 
-            <center>
-                <input class="submithover" type="submit" value="Google Search">
-                <input class="submithover" type="submit" Value="I'm Feeling Lucky">
-            </center>
+        <div class="center">
+            <div>
+                <img class="logo" height="92" src="googlelogo_color_272x92dp.png">
+            </div>
+            <div class="searchcontainer">
+                <input id="srch" class="searchhover" type="text">
+            </div>
+            <div class="google"> 
+                    <input class="submithover" type="submit" value="Google Search">
+                    <input class="submithover" type="submit" Value="I'm Feeling Lucky">
+            </div>
         </div>
+        <div class="filler"></div>
         <footer id="bg">
-            <div id="bf">Australia</div>
-            <div class="footer">
-                <div>
-                    <a id="bb" href="#advertising">Advertising</a>
-                    <a id="bb" href="#business">Business</a>
-                    <a id="bb" href="#how-search-works">How Seach Works</a>
+                <div id="bf">Australia</div>
+                <div class="footerlinks">
+                    <div>
+                        <a id="bb" href="#advertising">Advertising</a>
+                        <a id="bb" href="#business">Business</a>
+                        <a id="bb" href="#how-search-works">How Seach Works</a>
+                    </div>
+                    <div class="footerright">
+                        <a id="bb" href="#privacy">Privacy</a>
+                        <a id="bb" href="#terms">Terms</a>
+                        <a id="bb" href="#service">Service</a>
+                    </div>
                 </div>
-                <div class="footerright">
-                    <a id="bb" href="#privacy">Privacy</a>
-                    <a id="bb" href="#terms">Terms</a>
-                    <a id="bb" href="#service">Service</a>
-                </div>
-            </div>
         </footer>
     </body>
 </html>
